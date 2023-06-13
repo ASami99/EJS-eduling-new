@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+<!-- Other css sheet link here -->
+<title>Contact Us</title>
+</head>
+<body>
+    <%- include('partials/navbar') %>
+    <div class="u-container">
+        <h3 class="page-heading text-center">Contact Us</h3>
+        <form class="contact-form" action="/contact%20us" method="post">
+            <div class="mb-3">
+                <label class="form-label" for="name">Name</label>
+                <input class="form-control" required type="text" name="name">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-control" required type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="message">Your Message</label>
+                <textarea class="form-control" required name="message" cols="60" rows="6" style="resize: none;" placeholder="Your Question"></textarea>
+            </div>
+            <button type="submit" class="btn btn-lg btn-edu-primary">Submit</button>
+        </form>
+    </div>
+<%- include('partials/footer') %>

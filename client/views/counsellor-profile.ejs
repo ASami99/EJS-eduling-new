@@ -1,0 +1,54 @@
+<%- include('partials/header') %>
+    <title><%=requestedCounsellor.name%></title>
+</head>
+<body>
+    <%- include('partials/navbar') %>
+    <div class="u-container">
+        <div class="row mb-5">
+            <div class="col-lg-3 col-md-4 col-sm-12">
+                <% if(requestedCounsellor.userImg != null) { %>
+                    <img class="counsellor-full-avatar img100" src="data:image/<%=requestedCounsellor.userImg.contentType%>;base64,<%=requestedCounsellor.userImg.data.toString('base64')%>" alt="counsellor-avatar">
+                <% } %>
+            </div>
+
+            <div class="col">
+                <div class="mb-5 mt-5">
+                    <h5><span class="counsellor-card-category"><em>Categories</em></span></h5>
+                    <% if(requestedCounsellor.categories.length != 0) { %>
+                        <% requestedCounsellor.categories.forEach(function(category){ %>
+                            <h6 style="display: inline-block;">#<%=category%></h6>
+                        <% }) %>
+                    <% } %>
+                    <h5><span class="counsellor-card-category"><em>Description</em></span></h5>
+                    <%-requestedCounsellor.bio%>
+                </div> 
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-sm-12 card-background">
+                <div class="mb-2 mt-5 text-center">
+                    <h4 class="timing-heading mb-4">Available Timings</h4>
+                </div>
+                <div class="mb-4">
+                    <% if(requestedCounsellor.timings != null) { %>
+                        <ul>
+                        <% requestedCounsellor.timings.forEach(function(timing){ %>
+                            <li><%=timing%></li>
+                        <% }) %>
+                        </ul>
+                    <% } %>
+                </div>
+                <div class="mb-3 mt-3 text-center">
+                    <% if(isUserOnline && userType == 0){ %>
+                        <button class="btn btn-lg btn-edu-primary" onclick="window.location.href='/hirecounsellor/<%=requestedCounsellor._id%>'">Hire</button>
+                    <% } else if(isUserOnline && userType == 1) { %>
+                        <h3 class="page-content-heading">Only Students can hire a counsellors</h3>
+                    <% } else { %>
+                        <h3 class="page-content-heading">Please Sign In to Hire a Counsellor</h3>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+
+<%- include('partials/footer') %>

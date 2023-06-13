@@ -1,0 +1,39 @@
+<%- include('partials/header') %>
+    <title>Search Blogs</title>
+</head>
+<body>
+    <%-include ('partials/navbar') %>
+    <div class="u-container" style="height: 82vh; overflow: scroll; overflow-x: hidden;">
+        <div class="mb-4 mt-4 search-bar">
+            <form action="/search/blogs" method="post">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="search">
+                    <button class="btn btn-md btn-edu-secondary" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+
+        <% if(requestedBlogs.length != 0){ %>
+            <div class="row mt-5">
+                <% requestedBlogs.forEach(function(blog){ %>
+                    <div class="col col-xl-4 col-lg-6 col-md-12 col-sm-12">
+                        <a href="/blogs/<%=blog._id%>">
+                            <div>
+                                <div class="mb-3">
+                                  <img class="blog-banner-image" src="data:image/<%=blog.titleImg.contentType%>;base64,<%=blog.titleImg.data.toString('base64')%>" alt="banner-image">
+                                </div>
+                                <div class="mb-3">
+                                  <h3 class="blog-card-heading me-2"><%=blog.title%></h3><p class="blog-card-date">(<%= blog.createdAt.toString().substring(4, 15) %>)</p>
+                                  <p class="blog-card-author-name"><%=blog.authorName%></p>
+                                </div> 
+                            </div>
+                        </a>
+                    </div>
+                <% }) %>     
+            </div>
+        <% } else { %>
+            <h3 class="page-heading text-center">No blogs found</h3>
+        <% } %>
+    </div>
+
+<%- include('partials/footer') %>

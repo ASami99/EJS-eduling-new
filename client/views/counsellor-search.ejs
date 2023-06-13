@@ -1,0 +1,46 @@
+<%- include('partials/header') %>
+    <title>Counsellors Search</title>
+</head>
+<body>
+    <%- include('partials/navbar') %>
+    <div class="u-container" style="height: 82vh; overflow: scroll; overflow-x: hidden;">
+        <div class="mb-4 mt-4 search-bar">
+            <form action="/search/counsellors" method="post">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="search" placeholder="Counsellor name | Category">
+                    <button class="btn btn-md btn-edu-secondary" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+        <% if(requestedCounsellors.length != 0){ %>
+            <div class="row mt-5">
+                <% requestedCounsellors.forEach(function(counsellor){ %>
+                    <div class="col co-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div class="counsellor-card">
+                            <a href="/counsellors/<%=counsellor._id%>">
+                                <div class="mb-3">
+                                    <% if(counsellor.userImg != null) { %>
+                                        <img class="counsellor-card-image"src="data:image/<%=counsellor.userImg.contentType%>;base64,<%=counsellor.userImg.data.toString('base64')%>" alt="counsellor-avatar">
+                                    <% } %>
+                                </div>
+                                <div class="mb-3 mt-3">
+                                    <h3 class="counsellor-card-heading"><%=counsellor.name%></h3>
+                                    <h5><span class="counsellor-card-category"><em>Categories</em></span></h5>
+                                    <% if(counsellor.categories.length != 0) { %>
+                                        <% counsellor.categories.forEach(function(category){ %>
+                                            <h6 style="display: inline-block;">#<%=category%></h6>
+                                        <% }) %>
+                                    <% } %>
+                                </div>
+                            </a>
+                        </div>
+                        
+                    </div>
+                <% }) %>
+            </div>
+        <% } else { %>
+            <h3 class="page-heading text-center">No Counsellors found</h3>
+        <% } %> 
+    </div>
+
+<%- include('partials/footer') %>

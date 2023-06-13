@@ -1,0 +1,88 @@
+<%- include('partials/header') %>
+    <title>Questionnaire Result</title>
+</head>
+<body>
+    <%- include('partials/navbar') %>
+    <section>
+        <div class="u-container" style="height: 68vh;  overflow: scroll; overflow-x: hidden;">
+            <h3 class="page-heading text-center mb-5">Quiz Result</h3>
+            <div class="row">
+                <div class="col-md-2 col-sm-12">
+                    <div class="vectorImg">
+                        <img src="../assets/quizVector.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-12">
+                    <div class="chart-box align-items-center" style="margin: auto;">
+                        <input id="result" type="hidden" value='<%= JSON.stringify(results) %>'>
+                        <div class="centered">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-12">
+
+                    <div class="vectorImg">
+                        <img src="../assets/quizVector2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script>
+  // Set up the chart
+    var canvas = document.getElementById('myChart');
+    var ctx = canvas.getContext('2d');
+
+    // Set the dimensions of the chart
+    var width = 520;
+    var height = 360;
+    canvas.width = width;
+    canvas.height = height;
+
+    // Set the bar width and spacing
+    var barWidth = 80;
+    var barSpacing = 40;
+
+    // Set the font for the labels
+    ctx.font = '16px Arial';
+
+    // Set the data for the chart
+    var data = JSON.parse(document.getElementById("result").value);
+    console.log(data);
+
+    // Set the colors for the chart
+    var colors = ['#36F8B2', '#D7F03B', '#459ED0', '#A46448'];
+
+    // Draw the bars and labels
+    var i = 0;
+    var newLabel = "";
+    for (var label in data) {
+        // increase data value for taller bar
+        data[label] = data[label] * 60;
+
+        // if label is to big then create short form
+        if(label.includes(" ")){
+            newLabel = label.split(" ").map(function(substring){return substring[0]}).join("");
+        } else{
+            newLabel = label;
+        }
+        console.log(newLabel);
+
+        // var wrapLabel = label.split(" ").join("\n");
+        // Draw the bar
+        ctx.fillStyle = colors[i];
+        ctx.fillRect(barSpacing + i * (barWidth + barSpacing), height - data[label], barWidth, data[label]);
+
+        // Draw the label
+        ctx.fillStyle = 'black';
+        ctx.textAlign = 'center';
+        // Calculate the label position
+        ctx.fillText(newLabel, barSpacing + i * (barWidth + barSpacing) + barWidth / 2, height - data[label] - 10);
+
+        i++;
+    }
+</script>
+
+<%- include('partials/footer') %>

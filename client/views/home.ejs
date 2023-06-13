@@ -1,0 +1,207 @@
+<%- include('partials/header') %>
+    <title>Home</title>
+    </head>
+
+    <body>
+        <%- include('partials/navbar') %>
+            <!-- Hero Section -->
+            <section id="hero">
+                <div class="u-container ">
+                    <div class="row">
+                        <div class="col-md-6 text-left hero-col-left">
+                            <h1 class="hero-big-heading">Get Quality career counselling<br>at one place</h1>
+                            <h3 class="hero-small-heading">Self-evaluate yourself<br>Now</h3>
+                            <p class="hero-text">Eduling helps you in self-evaluating yourself and find new suitable
+                                careers for you</p>
+                            <div class="row">
+                                <div class="col col-lg-3 hero-btn-col">
+                                    <button class="btn btn-lg btn-edu-primary"
+                                        onclick="window.location.href='/signup'">Sign Up</button>
+                                </div>
+                                <div class="col">
+                                    <a href="#">
+                                        <div class="row">
+                                            <div class="col col-lg-2 hero-btn-col"><i
+                                                    class="fa-solid fa-circle-play"></i></div>
+                                            <div class="col col-lg-4">
+                                                <p class="play-text">See How it Works</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 hero-col-right">
+                            <img src="../assets/Hero Image.png" alt="hero-image" class="img100">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Hero Section -->
+
+            <!-- counters -->
+            <section id="counters">
+                <div class="container-fluid counters">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <h4>
+                                <%=otherCounters.blogCount%>
+                            </h4>
+                            <p>Blog Reads</p>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h4>
+                                <%=counsellorCount%>
+                            </h4>
+                            <p>Expert Counselors</p>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h4>
+                                <%=otherCounters.resumeCount%>
+                            </h4>
+                            <p>Resume Creates</p>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h4>
+                                <%=otherCounters.hireCount%>
+                            </h4>
+                            <p>Hired Counselors</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- counters -->
+
+            <!-- Why Choose Us-->
+            <section id="why-choose-us">
+                <div class="u-container ">
+                    <h4 class="choose-us-soft-heading primary-color-heading text-center">WHY CHOOSE US</h4>
+                    <h1 class="choose-us-heading text-center">Benefits of career counselling<br>at Eduling</h1>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-lg-3 col-md-6">
+                                <img src="../assets/One on one icon.png" alt="One on one icon">
+                                <h4 class="feature-heading">One-On-One counselling</h4>
+                                <p>Get one on one counselling from professional career counsellors from across Pakistan
+                                </p>
+                            </div>
+                            <div class="col col-lg-3 col-md-6">
+                                <img src="../assets/time icon.png" alt="time icon">
+                                <h4 class="feature-heading">24/7 Availability</h4>
+                                <p>Check the availability of counsellors of attempt the questionnaire anytime of the day
+                                </p>
+                            </div>
+                            <div class="col col-lg-3 col-md-6">
+                                <img src="../assets/resume icon.png" alt="resume icon">
+                                <h4 class="feature-heading">Interactive Resume Builder</h4>
+                                <p>Create interactive resume with our resume builder and unlock career options</p>
+                            </div>
+                            <div class="col col-lg-3 col-md-6">
+                                <img src="../assets/price icon.png" alt="price icon">
+                                <h4 class="feature-heading">Affordable Prices</h4>
+                                <p>Get quality career counselling at an extremely affordable price.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Why Choose Us-->
+
+            <!-- About Us -->
+            <section id="about-us">
+                <div class="u-container ">
+                    <div class="row">
+                        <div class="col col-lg-6 text-left">
+                            <img src="../assets/About us image.png" alt="about us image" class="img100">
+                        </div>
+                        <div class="col col-lg-6 text-left">
+                            <h4 class="primary-color-heading">ABOUT US</h4>
+                            <h1 class="section-big-heading">Get counselling from professional counsellors</h1>
+                            <p class="bluepara">Welcome to Eduling, your trusted career counselling platform designed to
+                                empower individuals in making informed decisions about their professional journeys. At
+                                Eduling, we understand that navigating the complex world of careers can be overwhelming,
+                                and that's why we're here to provide you with comprehensive support and guidance every
+                                step of the way.</p>
+                            <!-- <p class="bluepara">
+                                Our platform offers a range of valuable features to help you on your career path. To
+                                begin with, we provide a user-friendly self-analyzing questionnaire. This questionnaire
+                                is designed to help you gain deeper insights into your interests, skills, values, and
+                                personality traits. By understanding your unique strengths and areas of growth, you can
+                                make more informed decisions about your career choices.
+                            <p> -->
+                                <button class="btn btn-lg btn-edu-primary"
+                                    onclick="window.location.href='/signup'">learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About Us -->
+
+            <!-- Schedule -->
+            <section id="schedule">
+                <div class="u-container ">
+                    <div class="row">
+                        <div class="col col-lg-6 text-left">
+                            <h4 class="primary-color-heading">FLEXIBLE TIMINGS WITH YOUR SCHEDULE</h4>
+                            <h1 class="section-big-heading">Counseling at your preferred time of the day</h1>
+                            <p class="bluepara">Schedule your meetings at your desired time of the day. Go through the
+                                available time slots of different counselors and choose the timing of your liking,
+                                simply send a meeting request and set yourself up for a session</p>
+                            <button class="btn btn-lg btn-edu-primary" onclick="window.location.href='/signup'">Hire a
+                                Counselor</button>
+                        </div>
+                        <div class="col col-lg-6 text-left">
+                            <img src="../assets/Images group.png" alt="schedule image" class="img100">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Schedule -->
+
+            <!-- Resume Builder -->
+            <section id="resume-builder">
+                <div class="u-container ">
+                    <div class="row">
+                        <div class="col col-lg-6 text-left">
+                            <img src="../assets/Images group (1).png" alt="Resume Builder image" class="img100">
+                        </div>
+                        <div class="col col-lg-6 text-left">
+                            <h4 class="primary-color-heading">EASY AND FAST RESUME BUILDER</h4>
+                            <h1 class="section-big-heading">Create your next resume with us</h1>
+                            <p class="bluepara">Our resume builder at Eduling is a powerful tool designed to assist you
+                                in creating a professional and impactful resume that highlights your skills,
+                                experiences, and qualifications effectively. Crafting a compelling resume is essential
+                                in today's competitive job market, and our user-friendly platform makes it easier than
+                                ever to create a standout document that captures the attention of potential employers.
+                            </p>
+                            <button class="btn btn-lg btn-edu-primary" onclick="window.location.href='/signup'">Test
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Resume Builder -->
+
+            <!-- Questionnaire -->
+            <section id="questionnaire">
+                <div class="u-container ">
+                    <div class="row">
+                        <div class="col col-lg-6 text-left">
+                            <h4 class="primary-color-heading">TEST YOUR SKILLS AND IMPROVE</h4>
+                            <h1 class="section-big-heading">Test and self-analyze yourself with our questionnaire</h1>
+                            <p class="bluepara">Our questionnaire at Eduling is a valuable tool designed to help you
+                                gain deeper insights into your interests, skills, values, and personality traits.
+                                Self-analysis is a crucial step in understanding your strengths, preferences, and areas
+                                of growth, which in turn can guide you towards making informed decisions about your
+                                career path.</p>
+                            <button class="btn btn-lg btn-edu-primary" onclick="window.location.href='/signup'">Test
+                                Yourself</button>
+                        </div>
+                        <div class="col col-lg-6 text-left">
+                            <img src="../assets/Images group (2).png" alt="questionnaire image" class="img100">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Questionnaire -->
+            <%- include('partials/footer') %>

@@ -1,0 +1,56 @@
+<%- include('partials/header') %>
+    <title>Counsellors</title>
+</head>
+<body>
+    <%- include('partials/navbar') %>
+
+    <div class="u-container">
+        <h1 class="page-heading text-center">Counsellors</h1>
+        <div class="mb-4 mt-4 search-bar">
+            <form action="/search/counsellors" method="post">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="search" placeholder="Counsellor name | Category">
+                    <button class="btn btn-md btn-edu-secondary" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="row mt-5">
+            <% counsellors.forEach(function(counsellor){ %>
+                <% if (counsellor.admin===0 ) { %>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="counsellor-card">
+                            <a href="/counsellors/<%=counsellor._id%>">
+                                <div class="mb-3">
+                                    <% if(counsellor.userImg !=null) { %>
+                                        <img class="counsellor-card-image"
+                                            src="data:image/<%=counsellor.userImg.contentType%>;base64,<%=counsellor.userImg.data.toString('base64')%>"
+                                            alt="counsellor-avatar">
+                                        <% } %>
+                                </div>
+                                <div class="my-3">
+                                    <h3 class="counsellor-card-heading">
+                                        <%=counsellor.name%>
+                                    </h3>
+                                    <h5><span class="counsellor-card-category"><em>Categories</em></span></h5>
+        
+                                    <% if(counsellor.categories.length !=0) { %>
+                                        <% counsellor.categories.forEach(function(category){ %>
+                                            <h6 style="display: inline-block;"><%=category%>
+                                            </h6>
+                                            <% }) %>
+                                                <% } %>
+                                </div>
+                            </a>
+                        </div>
+        
+                    </div>
+                    <% } %>
+                        <% }) %>
+        </div>
+
+
+
+    </div>
+      
+<%- include('partials/footer') %>

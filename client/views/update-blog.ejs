@@ -1,0 +1,75 @@
+<%- include('partials/header') %>
+    <script src="https://cdn.tiny.cloud/1/gwnupy4nvlshpim31wh0p406bc1kewk7xqlegl2ph1lq1dup/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <title>Update blog</title>
+</head>
+<body>
+    <%- include('partials/navbar')%>
+    <div class="u-container">
+        <div class="mb-3 text-center">
+            <% if(requestedBlog.titleImg != null){ %>
+                <img class="blog-banner-image" src="data:image/<%=requestedBlog.titleImg.contentType%>;base64,<%=requestedBlog.titleImg.data.toString('base64')%>" alt="banner-image">
+            <% } %>
+        </div>
+        
+        <div class="mb-3 text-center" style="width: 320px; margin: auto;">
+            <form action="/update/blogImage/<%=requestedBlog._id%>" method="post" enctype="multipart/form-data">
+                <input class="form-control mb-3" type="file" name="postImage" id="file" accept="image/png,image/jpeg,image/jpg,image/gif,.webp" required>
+                <button class="btn btn-md btn-edu-secondary" type="submit">Update Banner Image</button>
+            </form>
+        </div>  
+    
+        <div class="mb-3">
+            <form action="/update/status/<%=requestedBlog._id%>" method="post">
+                <label class="form-label" for="title">Title</label><br>
+                <input class="form-control mb-3" type="text" name="title" value="<%=requestedBlog.title%>">
+                <label class="form-label" for="content">Content</label>
+                <textarea name="content" cols="80" rows="8" style="resize: none;"><%-requestedBlog.content%></textarea>
+                <!-- update button -->
+                <button class="btn btn-md btn-edu-secondary mt-3" type="submit">Update Blog</button>
+            </form>
+            <!-- delete button -->
+            <form id="delete" action="/delete/<%=requestedBlog._id%>" method="post">
+                <button class="btn btn-md btn-edu-tertiary mt-3" type="button" onclick="checkConfirm()">Delete Blog</button>
+            </form>
+        </div>
+    
+        
+ 
+    </div>
+    
+
+    <script>
+        // set limit of title image up to 1MB
+        let uploadField = document.getElementById("file");
+        
+        uploadField.onchange = function() {
+            if(this.files[0].size > 1048576){
+               alert("File is too big!");
+               this.value = "";
+            };
+        };
+
+        function checkConfirm(){
+            if(confirm('Are you sure to delete this blog?') == true){
+                document.getElementById("delete").submit();
+            } else {
+                return false;
+            }
+        }
+
+        // tinymce text editor function
+        tinymce.init({
+        selector: 'textarea',
+        height: 600,
+        menubar: false,
+        plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+        tinycomments_mode: 'embedded',
+        tinycomments_author: 'Author name',
+        mergetags_list: [
+            { value: 'First.Name', title: 'First Name' },
+            { value: 'Email', title: 'Email' },
+        ],
+        });
+    </script>
+<%- include('partials/footer') %>

@@ -1,0 +1,632 @@
+/*--------- Universal Styling ---------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link,
+a:visited {
+    color: black;
+}
+
+.u-container {
+    padding: 60px 120px;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' opacity='.45' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0' gradientTransform='rotate(214,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%230FF'/%3E%3Cstop offset='1' stop-color='%23CF6'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(225,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%231DFF66'/%3E%3Cstop offset='1' stop-color='%2337F2FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='66'%3E%3Cpath d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='22' transform='' cx='500' cy='100' r='40'/%3E%3Cpath transform='' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='20'%3E%3Cpath transform='' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='44' transform='' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.u-container::-webkit-scrollbar {
+    display: none;
+}
+
+.edu-primary-color {
+    color: #36F8B2;
+}
+
+.section-big-heading {
+    font-weight: 700;
+    font-size: 3.8em;
+    margin: 26px 0 32px;
+}
+
+.bluepara {
+    font-weight: 400;
+    font-size: 22px;
+    color: #459ED0;
+}
+
+.primary-color-heading {
+    font-weight: 600;
+    font-size: 26px;
+    color: #36F8B2;
+}
+
+.page-heading {
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.page-content-heading {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.search-bar {
+    width: 90%;
+    margin: auto;
+}
+
+/*--------- Universal Styling ---------*/
+
+/* ============================================== */
+
+/*--------- Buttons ---------*/
+
+.btn-lg {
+    padding: 12px 24px;
+    border-radius: 12px;
+}
+
+.btn-white {
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+    transition: background-color 0.3s;
+}
+
+.btn-white:hover {
+    background-color: rgba(255, 255, 255, 0.60);
+}
+
+.btn-edu-primary {
+    background-color: rgba(54, 248, 178, 1);
+    color: black;
+    transition: background-color 0.3s;
+}
+
+.btn-edu-primary:hover {
+    background-color: rgba(255, 255, 255, 0.60);
+    border: 1px solid black;
+}
+
+.btn-edu-secondary {
+    background-color: rgba(69, 158, 208, 1);
+    color: black;
+    transition: background-color 0.3s;
+}
+
+.btn-edu-secondary:hover {
+    background-color: rgba(69, 158, 208, 0.60);
+    border: 1px solid black;
+}
+
+.btn-edu-tertiary {
+    background-color: rgba(164, 100, 72, 1);
+    color: black;
+    transition: background-color 0.3s;
+}
+
+.btn-edu-tertiary:hover {
+    background-color: rgba(164, 100, 72, 0.60);
+    border: 1px solid black;
+}
+
+.date {
+    color: #D9D9D9;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/*--------- Buttons ---------*/
+
+/* ============================================== */
+
+/* ----------- Header -----------*/
+.navbar {
+    background-color: rgba(54, 248, 178, 0.45);
+    padding: 32px 120px;
+}
+
+.nav-btn-mg {
+    margin-right: 18px;
+}
+
+.nav-item {
+    font-size: 18px;
+    margin: 0 6px;
+}
+
+.nav-link {
+    color: rgba(0, 0, 0, .80);
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+.user-name {
+    display: inline-block;
+    color: #459ED0;
+    font-weight: 100;
+    font-size: 24px;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+/* ----------- Header -----------*/
+
+/* ============================================== */
+
+/* ----------- Hero Section -----------*/
+.hero-col-right {
+    display: flex;
+    justify-content: right;
+}
+
+.hero-btn-col {
+    margin-right: -56px;
+}
+
+.hero-big-heading {
+    font-weight: 700;
+    font-size: 3.8em;
+    margin-bottom: 48px;
+}
+
+.hero-small-heading {
+    font-weight: 700;
+    font-size: 3em;
+    margin-bottom: 68px;
+}
+
+.hero-text {
+    font-weight: 400;
+    font-size: 1.8em;
+    margin-bottom: 48px;
+}
+
+.fa-circle-play {
+    font-size: 48px;
+    color: #CBCACA;
+    margin-top: 4px;
+}
+
+.play-text {
+    display: inline-block;
+    font-size: 18px;
+    margin: 14px 0 0 8px;
+    border-bottom: 1px solid black;
+}
+
+/* ----------- Hero Section -----------*/
+
+/* ============================================== */
+
+/* ----------- Counters Section -----------*/
+.counters {
+    background-color: rgba(54, 248, 178, 1);
+    padding: 30px 120px 0;
+    height: 200px auto;
+}
+
+.counters h4 {
+    color: white;
+    font-weight: 700;
+    font-size: 62px;
+}
+
+.counters p {
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* ----------- Counters Section -----------*/
+
+/* ============================================== */
+
+/* ----------- Why Choose Us Section -----------*/
+
+.choose-us-soft-heading {
+    margin: 24px 0;
+}
+
+.choose-us-heading {
+    font-weight: 700;
+    font-size: 3.8em;
+    margin: 48px 0 102px;
+}
+
+.feature-heading {
+    font-weight: 600;
+    font-size: 20px;
+    margin: 14px 0 26px;
+}
+
+/* ----------- Why Choose Us Section -----------*/
+
+/* ============================================== */
+
+/* ----------- Footer Section -----------*/
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #36F8B273;
+}
+
+.footer-icon {
+    font-size: 42px;
+}
+
+.Copyright {
+    background-color: #36F8B2;
+    text-align: center;
+
+}
+
+/* ----------- Footer Section -----------*/
+
+/* ============================================== */
+
+/* ----------- Sign Up and Sign In Page -----------*/
+
+.sign-form {
+    width: 600px;
+    margin: auto;
+}
+.contact-form {
+    width: 600px;
+    margin: auto;
+}
+
+.sign-heading {
+    font-size: 36px;
+    margin-bottom: 62px;
+}
+
+.signup-check {
+    margin-top: 48px;
+}
+
+.signup-btn {
+    margin: 28px 0;
+}
+
+/* ----------- Sign Up Page -----------*/
+
+/* ============================================== */
+
+/* ----------- Dashboard Page -----------*/
+.user-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+/* ----------- Dashboard Page -----------*/
+
+/* ============================================== */
+
+/* ----------- Blogs Styling -----------*/
+.banner-full-image {
+    margin: auto;
+    width: 80%;
+    height: 70%;
+    border-radius: 12px;
+}
+
+.blog-banner-image {
+    width: 520px;
+    height: 200px;
+    border-radius: 12px;
+}
+
+.blog-card-heading {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 28px;
+    color: black;
+}
+
+.blog-card-date {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 18px;
+    color: #D9D9D9;
+}
+
+.blog-card-author-name {
+    font-weight: 400;
+    font-size: 18px;
+    color: #36F8B2;
+}
+
+.author-name {
+    font-size: 16px;
+    color: #36F8B2;
+}
+
+.publish-date {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.text-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    margin-right: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-character {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.avatar-name {
+    /* display: inline-block; */
+    font-size: 20px;
+}
+
+/* .comment {
+    margin-left: -26px;
+} */
+
+.comment-body {
+    display: inline-block;
+}
+
+
+/* ----------- Blogs Styling -----------*/
+
+/* ============================================== */
+
+/* ----------- Counsellors Styling -----------*/
+
+.counsellor-card {
+    width: 96%;
+    margin: auto;
+}
+
+.counsellor-card-image {
+    width: 100%;
+    height: 270px;
+    border-radius: 12px;
+}
+
+.counsellor-card-category {
+    color: #36F8B2;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.counsellor-full-avatar {
+    width: 340px;
+    /* height: 460px; */
+    border-radius: 12px;
+}
+
+.timing-heading {
+    color: #36F8B2;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.card-background {
+    background-color: rgba(217, 217, 217, .60);
+    border-radius: 12px;
+}
+
+/* ----------- Counsellors Styling -----------*/
+
+/* ============================================== */
+
+/* ----------- Responses & Requests Styling -----------*/
+.response-card {
+    border: 1px solid black;
+    border-radius: 22px;
+    padding: 8px 12px;
+}
+
+/* ----------- Responses & Requests Styling -----------*/
+
+/* ============================================== */
+
+/* ----------- Questionnaire Styling -----------*/
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vectorImg img {
+    width: 80%;
+}
+
+.vectorImg {
+    text-align: center;
+}
+
+.Quizh2 {
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.chart-box {
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+
+/* Questionaire start*/
+.quesField {
+    text-align: center;
+}
+
+.start-quiz {
+    background-image: url("../assets/BG_questionaire.png");
+    height: 600px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.btn-start {
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 10px 22px;
+    background-color: #36F8B2;
+}
+
+
+@media only screen and (max-width: 1440px) {
+    .start-quiz {
+        height: 440px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .start-quiz {
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .start-quiz {
+        height: 310px;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .start-quiz {
+        height: 270px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .start-quiz {
+        height: 220px;
+    }
+
+    .btn-start {
+        padding: 7px 12px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    .start-quiz {
+        height: 130px;
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    .start-quiz {
+        height: 105px;
+    }
+}
+
+
+
+
+.img100 {
+    width: 100%;
+}
+
+@media screen and (min-width: 880px) {
+    .comment {
+        margin-left: -7%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .section-big-heading {
+        font-size: 1.1em;
+        margin: 16px 0 
+    }
+
+    .bluepara {
+        font-size: 13px;
+    }
+
+    .hero-big-heading {
+        font-weight: 700;
+        font-size: 1.8em;
+    }
+
+    .hero-small-heading {
+        font-weight: 700;
+        font-size: 1em;
+        margin-bottom: 18px;
+    }
+
+    .hero-col-right {
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .banner-full-image {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .navbar {
+        background-color: rgba(54, 248, 178, 0.45);
+        padding: 32px 10px;
+    }
+
+    .choose-us-heading {
+        font-weight: 700;
+        font-size: 1.8em;
+        margin: 28px 0 42px;
+    }
+
+
+    .u-container {
+        padding: 60px 20px;
+    }
+
+    .counsellor-card-image {
+        height: 180px;
+    }
+
+    .contact-form {
+        width: 340px;
+        margin: auto;
+    }
+
+}
+
+
+/* ----------- Questionnaire Styling -----------*/
+
+/* ============================================== */
